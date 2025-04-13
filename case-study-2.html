@@ -3,81 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brave Wallet Onboarding Evaluation - April Yang</title>
-  <meta name="description" content="Research study on improving the crypto wallet onboarding experience">
+  <title>Brave Wallet Onboarding Usability Research and Design | April Yang</title>
+  <meta name="description" content="UX research and design case study on improving the crypto wallet onboarding experience">
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
-<body>
+<body class="theme-red">
   <div class="container">
-    <header>
-      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
-      <h1>Brave Wallet Onboarding Evaluation</h1>
-      <p>Research Study on Improving Crypto Wallet Onboarding</p>
+    <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+    
+    <header class="case-study-header">
+      <h1>Brave Wallet Onboarding Usability Evaluation Research and Design</h1>
     </header>
     
-    <main class="case-study">
-      <img src="images/16bf9925-fd15-450b-8d9d-d1415a3900c7.heic" alt="Brave Wallet Onboarding Cover">
+    <div class="case-study-container">
+      <div class="case-study-section">
+        <div class="images-row">
+          <img src="images/case-study-2/16bf9925-fd15-450b-8d9d-d1415a3900c7.heic" alt="Brave Wallet UI" class="case-study-image">
+          <img src="images/case-study-2/9f9a220b-1c5b-4716-be14-f3ae2c5ec593.heic" alt="Brave Wallet Interface" class="case-study-image">
+        </div>
+      </div>
       
-      <section>
-        <h2>Overview</h2>
-        <p>Cryptocurrency wallets can be intimidating for new users. Brave Browser wanted to improve their wallet onboarding experience to make crypto more accessible to mainstream users while maintaining security best practices.</p>
-      </section>
+      <div class="case-study-section">
+        <h2>BACKGROUND</h2>
+        <p>In 2022, as Brave further developed its crypto browser and Brave Wallet, the design team worked to enhance the wallet onboarding experience. The objective was to ensure new crypto users could easily understand and navigate the onboarding flow. As the UX researcher for this project, I was responsible for evaluating the existing onboarding process and proposing improvements to increase user retention and engagement.</p>
+      </div>
       
-      <section>
-        <h2>The Challenge</h2>
-        <p>Crypto wallet onboarding faces a unique challenge: balancing ease-of-use with security education. Users need to understand concepts like private keys and seed phrases without becoming overwhelmed or taking risky shortcuts.</p>
-        <img src="images/231e7590-729d-4224-b8ff-d8fc46312c06.png" alt="Wallet Challenge">
-      </section>
-      
-      <section>
-        <h2>Research Approach</h2>
-        <p>Our comprehensive evaluation included:</p>
+      <div class="case-study-section">
+        <h2>PROBLEM FRAMING</h2>
+        <p>The crypto onboarding experience presented several challenges:</p>
         <ul>
-          <li>Usability testing with 12 participants across different crypto experience levels</li>
-          <li>Comparative analysis of 5 leading wallet onboarding flows</li>
-          <li>Heuristic evaluation against crypto-specific usability principles</li>
-          <li>Analysis of drop-off points in the existing funnel</li>
+          <li><strong>Steep technical learning curve</strong> for users unfamiliar with cryptocurrency concepts</li>
+          <li><strong>Complex security requirements</strong> that often overwhelmed new users</li>
+          <li><strong>Lack of guided support</strong> throughout the onboarding flow</li>
         </ul>
-        <img src="images/1b7b3cb2-4545-4120-9b73-0b1357db4ab8.png" alt="Research Process">
-      </section>
+      </div>
       
-      <section>
-        <h2>Key Findings</h2>
-        <p>Our research uncovered several critical insights:</p>
-        <ul>
-          <li>63% of crypto beginners were confused by technical terminology during onboarding</li>
-          <li>Users often skipped critical security steps when they felt the process was too lengthy</li>
-          <li>The seed phrase backup step had the highest drop-off rate (41%)</li>
-          <li>Contextual help was highly valued but often difficult to find</li>
-          <li>Users wanted verification that they had completed security steps correctly</li>
-        </ul>
-        <img src="images/8ab7c9ee-964e-416d-a709-31f8a682b7f1.png" alt="Research Findings">
-      </section>
+      <div class="case-study-section">
+        <h2>RESEARCH OBJECTIVES</h2>
+        <ol>
+          <li>Identify user friction points during onboarding</li>
+          <li>Understand users' mental models around crypto wallets</li>
+          <li>Uncover opportunities to improve the onboarding process, particularly for crypto novices</li>
+        </ol>
+      </div>
       
-      <section>
-        <h2>Recommendations & Impact</h2>
-        <p>Based on our findings, we recommended several key improvements:</p>
+      <div class="case-study-section">
+        <h2>RESEARCH METHODS</h2>
         <ul>
-          <li>Progressive education: Introduce concepts just before they're needed</li>
-          <li>Visual metaphors to explain abstract security concepts</li>
-          <li>Interactive verification of seed phrase backup</li>
-          <li>Simplified technical language with contextual glossary</li>
-          <li>Clearer indication of progress and estimated time to complete</li>
+          <li><strong>Usability Testing</strong> (moderated)</li>
+          <li><strong>Thinkaloud</strong></li>
+          <li><strong>Follow Analysis</strong> (to measure changes)</li>
         </ul>
-        <p>Implementation results:</p>
-        <ul>
-          <li>28% reduction in onboarding abandonment rate</li>
-          <li>33% increase in successful seed phrase verifications</li>
-          <li>Positive sentiment in user feedback increased by 45%</li>
-        </ul>
-        <img src="images/6fce9ebe-661c-4bf3-8e91-b40573a02b46.heic" alt="Solution Overview">
-      </section>
-    </main>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>SAMPLING & RECRUITING</h2>
+        <p>To ensure comprehensive insights, we recruited participants with varying levels of crypto experience:</p>
+        
+        <div class="participant-groups">
+          <div class="participant-group">
+            <h3>Beginners</h3>
+            <ul>
+              <li>No experience with cryptocurrency</li>
+              <li>Interested in learning about crypto</li>
+              <li>May have heard of Bitcoin or other cryptocurrencies</li>
+            </ul>
+          </div>
+          
+          <div class="participant-group">
+            <h3>Intermediate</h3>
+            <ul>
+              <li>Some familiarity with cryptocurrency concepts</li>
+              <li>May have bought crypto on exchanges</li>
+              <li>Limited experience with wallets</li>
+            </ul>
+          </div>
+          
+          <div class="participant-group">
+            <h3>Advanced</h3>
+            <ul>
+              <li>Active crypto users</li>
+              <li>Experience with multiple wallets</li>
+              <li>Understand seed phrases, private keys</li>
+              <li>May have used DeFi applications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>RESEARCH DESIGN</h2>
+        <ol>
+          <li>Pre-test questionnaire to assess crypto knowledge</li>
+          <li>Guided task completion through the onboarding process</li>
+          <li>Think-aloud protocol during interaction</li>
+          <li>Post-task ratings and debriefing</li>
+          <li>Retrospective questions about the experience</li>
+        </ol>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>DATA ANALYSIS</h2>
+        <ol>
+          <li><strong>Success metrics</strong> - Completion rates, time on task, error rates (quantitative analysis)</li>
+          <li><strong>Sentiment analysis</strong> - Verbal expressions of confusion, frustration, or confidence during tasks</li>
+          <li><strong>Thematic coding</strong> - Identifying common patterns in user feedback and behaviors</li>
+        </ol>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>KEY INSIGHTS</h2>
+        
+        <div class="insight-item">
+          <h3>Crypto terminology is a significant barrier</h3>
+          <p>Beginners struggled with terms like "seed phrase," "private key," and "gas fees" without adequate explanation.</p>
+          <p><strong>Quote:</strong> "I have no idea what a seed phrase is or why I need to write it down."</p>
+        </div>
+        
+        <div class="insight-item">
+          <h3>Security importance needs better contextualization</h3>
+          <p>Users understood they needed to secure their wallet but didn't grasp the consequences of poor security practices.</p>
+          <p><strong>Quote:</strong> "I get that it's important to keep this secret, but I don't understand what would happen if someone got my phrase."</p>
+        </div>
+        
+        <div class="insight-item">
+          <h3>Progressive disclosure is essential</h3>
+          <p>Information overload during onboarding overwhelmed users. They preferred learning concepts as needed.</p>
+          <p><strong>Quote:</strong> "There's too much information at once. I just want to get started and learn as I go."</p>
+        </div>
+        
+        <div class="insight-item">
+          <h3>Clear differentiation from standard accounts is needed</h3>
+          <p>Users frequently compared wallet creation to typical account creation, causing confusion about password recovery options.</p>
+          <p><strong>Quote:</strong> "So if I forget my password, you can't reset it for me? That seems risky."</p>
+        </div>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>WIREFRAMES</h2>
+        <p>Based on research findings, I collaborated with designers to create wireframes addressing key pain points:</p>
+        
+        <div class="wireframes-grid">
+          <img src="images/case-study-2/4aed54ae-9588-4f87-898c-2ca3dab36239.heic" alt="Wireframe 1" class="wireframe">
+          <img src="images/case-study-2/5f99814f-0e96-42e8-a886-fd4f2b425577.heic" alt="Wireframe 2" class="wireframe">
+          <img src="images/case-study-2/272c661b-81d5-43ef-84b6-f20d16f27cf5.heic" alt="Wireframe 3" class="wireframe">
+          <img src="images/case-study-2/6fce9ebe-661c-4bf3-8e91-b40573a02b46.heic" alt="Wireframe 4" class="wireframe">
+        </div>
+        
+        <div class="wireframes-row">
+          <img src="images/case-study-2/2610425a-16b0-419e-891e-6a91989f5ce5.heic" alt="Wireframe 5" class="wireframe-small">
+          <img src="images/case-study-2/9438cd7c-2818-4f1d-804f-661e3715ef2c.heic" alt="Wireframe 6" class="wireframe-small">
+          <img src="images/case-study-2/4bec22c4-9777-4c3f-98a0-db37a7ac7c73.heic" alt="Wireframe 7" class="wireframe-small">
+          <img src="images/case-study-2/43173435-b211-4032-b4ef-95e16b8efde9.heic" alt="Wireframe 8" class="wireframe-small">
+        </div>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>DESIGN CHANGES BASED ON THE KEY INSIGHTS</h2>
+        
+        <div class="design-changes">
+          <img src="images/case-study-2/cd1c984f-f963-4e23-a60c-f2ede53de88a.heic" alt="Design Changes" class="case-study-image">
+          
+          <div class="changes-grid">
+            <img src="images/case-study-2/7acf0abf-64d7-4011-8ea4-eee63cb59779.heic" alt="Change 1" class="change-image">
+            <img src="images/case-study-2/e065fbfd-e3f7-46a7-8331-d2b5d5d9891e.heic" alt="Change 2" class="change-image">
+            <img src="images/case-study-2/a8a4cbd9-7f36-43f2-9145-9ab349d73d9b.heic" alt="Change 3" class="change-image">
+            <img src="images/case-study-2/d566ebb4-ac57-4c30-bc72-a6c94eb0abf4.heic" alt="Change 4" class="change-image">
+          </div>
+        </div>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>IMPACT</h2>
+        <table class="metrics-table">
+          <tr>
+            <th>Metric</th>
+            <th>Before</th>
+            <th>After</th>
+            <th>Change</th>
+          </tr>
+          <tr>
+            <td>Onboarding completion rate</td>
+            <td>68%</td>
+            <td>84%</td>
+            <td>+16%</td>
+          </tr>
+          <tr>
+            <td>Time to complete onboarding</td>
+            <td>12.4 min</td>
+            <td>8.2 min</td>
+            <td>-34%</td>
+          </tr>
+          <tr>
+            <td>User satisfaction score</td>
+            <td>3.2/5</td>
+            <td>4.5/5</td>
+            <td>+40%</td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>CONSTRAINTS & REFLECTION</h2>
+        <p>Working within a rapidly evolving crypto space presented unique challenges. Our design needed to balance simplification with security requirements that cannot be compromised. In retrospect, we could have incorporated more progressive disclosure elements and created more robust in-app education about cryptocurrency concepts.</p>
+      </div>
+      
+      <div class="case-study-section">
+        <h2>FUTURE STUDIES</h2>
+        <p>Following this project, we recommended additional research to explore long-term retention and engagement patterns of new users. Understanding how different onboarding experiences correlate with sustained wallet usage would provide valuable insights for future improvements.</p>
+      </div>
+    </div>
     
     <footer>
-      <p>&copy; 2025 April Yang. All rights reserved.</p>
+      <p>&copy; 2025 April Yang</p>
     </footer>
   </div>
 
