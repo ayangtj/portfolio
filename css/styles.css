@@ -9,8 +9,10 @@
   --hover-color: #2a2a2a;
   --section-spacing: 80px;
   --red-accent: #8a1116;
-  --olive-accent: #3f401f;
+  --olive-accent: #3d422e;
   --blue-accent: #1f3a7a;
+  --yellow-accent: #fcda4c;
+  --green-accent: #a2ceb3;
 }
 
 /* Base Styles */
@@ -204,25 +206,22 @@ footer {
 
 .case-study-header h1 {
   font-size: 2.5rem;
-  max-width: 800px;
   margin-bottom: 16px;
 }
 
 .case-study-header .subtitle {
   font-size: 1.25rem;
   color: var(--secondary-text);
-  max-width: 800px;
 }
 
 .case-study-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto 80px;
 }
 
 .case-study-image {
   width: 100%;
   border-radius: 8px;
-  margin: 40px 0;
 }
 
 .case-study-section {
@@ -252,9 +251,19 @@ footer {
   margin-bottom: 8px;
 }
 
+.case-study-section .columns {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.columns div {
+  flex: 1;
+}
+
 .back-link {
   display: inline-block;
-  margin-bottom: 40px;
+  margin: 20px 0;
   color: var(--secondary-text);
 }
 
@@ -366,23 +375,35 @@ footer {
   color: var(--secondary-text);
 }
 
+.yellow {
+  color: #fcda4c;
+}
+
+.green {
+  color: #a2ceb3;
+}
+
+.img-caption {
+  font-size: small;
+}
+
 @media (max-width: 768px) {
   .images-row {
     flex-direction: column;
   }
-  
+
   .participant-groups {
     grid-template-columns: 1fr;
   }
-  
+
   .wireframes-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .wireframe-small {
     width: calc(50% - 8px);
   }
-  
+
   .changes-grid {
     grid-template-columns: 1fr;
   }
@@ -412,19 +433,19 @@ footer {
   .container {
     padding: 0 20px;
   }
-  
+
   .intro {
     flex-direction: column;
   }
-  
+
   .profile-photo {
     margin-bottom: 30px;
   }
-  
+
   .project-grid {
     grid-template-columns: 1fr;
   }
-  
+
   h1 {
     font-size: 2.5rem;
   }
@@ -436,20 +457,20 @@ footer {
     align-items: flex-start;
     gap: 16px;
   }
-  
+
   .contact-links {
     flex-direction: column;
     gap: 8px;
   }
-  
+
   .skills-section {
     grid-template-columns: 1fr;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
