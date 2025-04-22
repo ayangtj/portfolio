@@ -8,7 +8,7 @@
   --card-bg: #1e1e1e;
   --hover-color: #2a2a2a;
   --section-spacing: 80px;
-  --red-accent: #8a1116;
+  --red-accent: #632322;
   --olive-accent: #3d422e;
   --blue-accent: #1f3a7a;
   --yellow-accent: #fcda4c;
@@ -248,7 +248,7 @@ footer {
 }
 
 .case-study-section li {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .case-study-section .columns {
