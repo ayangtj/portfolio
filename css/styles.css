@@ -390,6 +390,11 @@ footer {
 .img-caption {
   font-size: small;
 }
+
+#cs2 h1, #cs2 h2, #cs2 h3, #cs2 h4, #cs2 p, #cs2 li {
+  color: #ffffff;
+}
+
 #cs4 {
   background-color: var(--white-bg);
 }
@@ -402,7 +407,7 @@ footer {
   color: var(--light-grey);
 }
 
-#cs4 h1, h2, h3, h4 {
+#cs4 h1, #cs4 h2, #cs4 h3, #cs4 h4 {
   color: var(--dark-grey);
 }
 
