@@ -13,6 +13,10 @@
   --blue-accent: #1f3a7a;
   --yellow-accent: #fcda4c;
   --green-accent: #a2ceb3;
+  --white-bg:  #EEEBE7;
+  --orange-accent: #ED662D;
+  --dark-grey: #666267;
+  --light-grey: #999398;
 }
 
 /* Base Styles */
@@ -385,6 +389,31 @@ footer {
 
 .img-caption {
   font-size: small;
+}
+#cs4 {
+  background-color: var(--white-bg);
+}
+
+#cs4 html body {
+  background-color: var(--white-bg);
+}
+
+#cs4 p {
+  color: var(--light-grey);
+}
+
+#cs4 h1, h2, h3, h4 {
+  color: var(--dark-grey);
+}
+
+#cs4 span {
+  color: var(--orange-accent);
+}
+
+#cs4 .case-study-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
 @media (max-width: 768px) {
