@@ -3,182 +3,228 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jobs To Be Done Framework - Healthcare AI Platform | April Yang</title>
-  <meta name="description" content="UX research case study applying Jobs To Be Done framework to a healthcare AI platform">
+  <title>Reframing the Product Strategy Question – Healthcare AI Platform | April Yang</title>
+  <meta name="description" content="UX research case study applying Jobs To Be Done framework to a healthcare AI predictive analytics platform">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/case-study-4.css">
 </head>
-<body id='cs4'>
-  <div class="container">
-    <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
 
-    <header class="case-study-header" style='text-align: center'>
-      <h1>Jobs To Be Done Framework</h1>
-      <p class="subtitle">AI-Predictive Analytics Platform UX Research Case Study</p>
-    </header>
+<body id="cs4">
+<div class="container">
 
-    <div class="case-study-container">
-      <div class="case-study-section" style='text-align: center'>
-        <p style='font-size: small'>#B2B product #healthcare #JTBD framework #user journey #end-to-end research | 2011</p>
-        <p style='font-size: small'><span>Reflection: This project taught us that the best AI isn’t the smartest—it’s the one that helps experts do their most meaningful work.</span></p>
+  <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+  <!-- ══ HEADER ══ -->
+  <header class="case-study-header">
+    <span class="tags">#B2B · #Healthcare · #JTBD · #0→1 Productization · 2021</span>
+    <h1>Reframing the product strategy question — from <span>feature gaps</span> to what self-sufficiency actually requires</h1>
+    <p class="subtitle">
+      A healthcare AI platform was generating real value for actuaries and data scientists —
+      but every meaningful interaction required hand-holding from internal data scientists.
+      That wasn't a product, it was a service. I ran end-to-end JTBD research to understand
+      what expert users actually needed to operate independently, and translated those findings
+      into a product strategy that shifted the company's roadmap toward self-sufficiency.
+    </p>
+    <div class="meta-row">
+      <div>
+        <div class="meta-label">My role</div>
+        <div class="meta-value">End-to-end UX Research</div>
       </div>
+      <div>
+        <div class="meta-label">Framework</div>
+        <div class="meta-value">Jobs To Be Done (JTBD)</div>
+      </div>
+      <div>
+        <div class="meta-label">Methods</div>
+        <div class="meta-value">Semi-structured interviews · Observational studies · Usability testing</div>
+      </div>
+      <div>
+        <div class="meta-label">Users</div>
+        <div class="meta-value">Actuaries · Data Scientists</div>
+      </div>
+      <div>
+        <div class="meta-label">Collaborators</div>
+        <div class="meta-value">PM · Design · Engineering · Data Science</div>
+      </div>
+    </div>
+  </header>
 
-      <div class="case-study-section">
-        <div class='columns'>
-          <div>
-            <h2>Background</h2>
-            <p>The <span>healthcare</span>-focused <span>artificial intelligence (AI)</span> platform company specializes in optimizing healthcare delivery through predictive analytics. It is designed to help hospital networks and <span>insurance carriers</span> to enhance individual patient care by delivering real-time predictive analytics.</p>
-          </div>
-          <div>
-            <img src="images/case-study-4/background.png" alt="Healthcare AI Platform Interface" class="case-study-image">
-          </div>
+  <div class="case-study-container">
+
+    <!-- ══ IMPACT BAR ══ -->
+    <div class="case-study-section">
+      <div class="impact-bar">
+        <div class="impact-bar-label">Research impact</div>
+        <ul class="impact-list">
+          <li>Reframed the product strategy question from "what features are missing?" to "what would it take for expert users to trust this tool without internal support?" — shifting the entire roadmap focus</li>
+          <li>Identified three specific capability gaps blocking self-sufficiency: data trust, model explainability, and cross-functional collaboration — each mapped to a concrete roadmap decision</li>
+          <li>Surfaced that data scientists spent ~70% of their time on data cleaning rather than modeling — repositioning data pipeline automation as first-priority investment, not a future improvement</li>
+          <li>Established a JTBD-based user needs framework giving the team a stable foundation for role-specific design decisions, reducing guesswork in future product cycles</li>
+          <li>Defined the design principle for all algorithm-facing features: outputs expert users can interrogate, explain, and stake their professional credibility on</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ══ CONTEXT ══ -->
+    <div class="case-study-section">
+      <div class="columns">
+        <div>
+          <h2>The real problem — a product that <span>couldn't stand alone</span></h2>
+          <p>The platform processed healthcare data from hospital networks and insurance carriers to generate premium predictions via a predictive analytics algorithm. For actuaries and data scientists, this had genuine value — faster modeling, more data inputs than manual methods could handle.</p>
+          <p>But there was a structural problem. <span>Every time a user needed to act on a prediction, they needed to understand how the algorithm reached it.</span> Not because they doubted the output — but because their professional role required them to explain and defend it. Actuaries report to regulators. Data scientists present to executives. "The algorithm said so" is not a defensible answer in either context.</p>
+          <p>Without explainability built into the platform, users fell back on internal data scientists to interpret outputs. <span>The product was dependent on a support layer that was expensive, unscalable, and fundamentally incompatible with a self-serve product model.</span> The business goal was clear: reduce that dependency. The research question was: what exactly was creating it?</p>
+        </div>
+        <div>
+          <img src="images/case-study-4/background.png" alt="Healthcare AI Platform Interface" class="case-study-image">
+          <p class="img-caption">The platform's analytics interface — where expert users needed to trust, interrogate, and explain algorithm outputs their professional role required them to defend.</p>
         </div>
       </div>
 
-      <div class="case-study-section">
-        <div class='columns'>
-          <div>
-            <h2>Challenges</h2>
-            <p>The current system is in its early stage and requires <span>significant hands-on support</span>, making interactions resource-intensive. This research aims to <span>inform the next stage of product development</span>, reducing consulting costs while improving <span>system usability</span> and the overall <span>user experience</span>.</p>
+      <div class="tension-block">
+        <div class="tension-label">The core productization tension</div>
+        <div class="tension-cols">
+          <div class="tension-side">
+            <div class="t-label">Current state</div>
+            <p>Expert users rely on internal data scientists to interpret algorithm outputs, configure data pipelines, and bridge collaboration gaps — making every meaningful use of the platform a consulting engagement</p>
           </div>
-          <div>
-            <h2>Stakeholder Alignment</h2>
-            <p>I met with the <span>product manager, product designer, front-end developer, data scientists</span>, and <span>data engineers</span> to understand their goals and concerns in order to get aligned on the research objectives. </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-study-section">
-        <h2>Research Objectives</h2>
-        <ol>
-          <li>Uncover key user jobs and motivations in their current workflow of making predictions.</li>
-          <li>Explore how key users use premium predictions and what improvements would enhance their confidence and efficiency.</li>
-          <li>Evaluate design and functionality improvements to ensure they effectively enhance usability and reduce friction.</li>
-        </ol>
-      </div>
-
-      <div class="case-study-section">
-        <div class='columns'>
-          <div>
-            <h2>Research Method</h2>
-            <ul>
-              <li>Semi-structured interview</li>
-              <li>Observational studies</li>
-              <li>Usability testing (post design change)</li>
-            </ul>
-          </div>
-          <div style='flex: 2;'>
-            <h2>Secondary study and existing data</h2>
-            <p>I conducted a secondary study on <span>AI</span> and <span>predictive analytics</span> to gain a deeper understanding of the space. Additionally, I analyzed the current product version to identify resource-intensive steps and areas for optimization.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-study-section">
-        <div class='columns'>
-          <div style='flex: 2;'>
-            <h2>Research Framework</h2>
-            <p>This research leveraged the <span>Jobs To Be Done (JTBD)</span> framework to uncover user behaviors and motivations, ensuring the analytics platform aligns with <span>real user needs and expectations</span>. It also considered users’ <span>emotional needs</span>, providing deeper insights to inform more user-centric design decisions.</p>
-          </div>
-          <div>
-            <img src="images/case-study-4/research-framework.png" alt="Research Framework" class="case-study-image">
-          </div>
-        </div>
-      </div>
-
-      <div class="case-study-section">
-        <div class='columns'>
-          <div>
-            <h2>Recruiting Criteria</h2>
-            <p>Actuaries</p>
-            <ul style='font-size: small'>
-              <li>Semi-structured interview</li>
-              <li>Observational studies</li>
-              <li>Usability testing (post design change)</li>
-            </ul>
-            <p>Data Scientists</p>
-            <ul style='font-size: small'>
-              <li>Semi-structured interview</li>
-              <li>Observational studies</li>
-              <li>Usability testing (post design change)</li>
-            </ul>
-          </div>
-          <div style='flex: 2;'>
-            <h2>Research Design (Outline)</h2>
-            <ol>
-              <li>Intro, set expectations.</li>
-              <li>[Verbal] Invite participants to talk about the overall process of making predictions and the challenges along the way.</li>
-              <li>[Observe] Ask participants to walk through the process of making predictions while verbalize their thoughts along the way.</li>
-              <li>[Verbal] Probe into the details observed, what they did, where they went, what they used, and the goal at each step.</li>
-              <li>[Outro] Any other comments.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-study-section">
-        <h2>Data Analysis</h2>
-        <p><span>Thematic Analysis</span> - Identifying Patterns & Themes in Qualitative Data</p>
-        <p><span>Affinity Mapping</span> - Clustering User Insights by Behavior & Motivation</p>
-        <p><span>User Journey Mapping</span> - Tracking Steps in Completing a Job & Identifying Friction Points</p>
-        <div style='display: flex; gap: 20px;'>
-          <div style='flex: 1'>
-            <img src="images/case-study-4/data-1.png" alt="Data Image" class="case-study-image">
-          </div>
-          <div style='flex: 1'>
-            <img src="images/case-study-4/data-2.png" alt="Data Image" class="case-study-image">
-          </div>
-          <div style='flex: 1'>
-            <img src="images/case-study-4/data-3.png" alt="Data Image" class="case-study-image">
-          </div>
-        </div>
-      </div>
-
-      <div class="case-study-section">
-        <h2>Key Insights</h2>
-        <div style='margin-bottom: 40px'>
-          <p><span>1. Improve and automate data pipelines, with dashboard reflecting data health.</span></p>
-          <p>Job - Trust the data before modeling</p>
-          <p>Motivation: Users need confidence and efficiency to make sure the data they work with is healthy.</p>
-          <p>Pain point: Data scientists spend almost 70% of the time fix mismatched data from EHRs and claims systems, often feeling anxiety about data quality.  </p>
-        </div>
-        <div style='margin-bottom: 40px'>
-          <p><span>2. Embed explanation into model outputs to increase the interpretability and explainability, translate technical predictions into actionable business narratives.</span></p>
-          <p>Job - Explain the data</p>
-          <p>Motivation: Users need to persuade stakeholders (e.g., executives, regulators) that premiums are both fair and profitable.</p>
-          <p>Pain point: Reporting to stakeholders is an important part of actuaries' workflow, unexplained models erode trust. Stakeholders demand transparency to ensure fairness, compliance, and accountability.</p>
-        </div>
-        <div style='margin-bottom: 40px'>
-          <p><span>3. Introduce collaboration hubs for seamless collaboration and feedback loops.</span></p>
-          <p>Job - Collaborate cross-functionally</p>
-          <p>Motivation: Users work with cross-functional teams to refine premium predictions to share back, align assumptions, and track changes so that they can make decisions faster without errors from miscommunication or version conflicts.</p>
-          <p>Pain point: “We email Excel files back and forth and hope nothing breaks.”</p>
-        </div>
-      </div>
-
-      <div class="case-study-section">
-        <div class='columns'>
-          <div>
-            <h2>Impact</h2>
-            <ol>
-              <li><span>Strategic product roadmap prioritization</span> - Insights revealed that the target users prioritize data trust and explainability, shifting from consulting to self-serve. </li>
-              <li><span>User centric design foundation</span> - Insights informed role-specific user needs, reducing guess work and future rework. </li>
-              <li><span>Foundation for human-entered AI design</span> - Insights informed that AI should augment human expertise, not replace judgment, which laid down a solid foundation for future work related to AI - AI’s success isn’t measured by how smart it seems, but by how well it serves the humans who rely on it.</li>
-            </ol>
-          </div>
-          <div>
-            <h2>Reflection</h2>
-            <p>While utilizing the <span>Jobs To Be Done (JTBD)</span> framework  worked really well in prioritizing user jobs over feature lists kept the team aligned on high-impact solutions, I'd propose to follow up with a <span>quantitative study</span> measuring user perceived importance to inform a phased rollout of new features for progressive adoption.</p>
+          <div class="tension-arrow">→</div>
+          <div class="tension-side">
+            <div class="t-label">Target state</div>
+            <p>Expert users can trust the data, interrogate the algorithm's reasoning, and collaborate cross-functionally inside the platform — operating independently without internal support</p>
           </div>
         </div>
       </div>
     </div>
 
-    <footer>
-      <p>&copy; 2025 April Yang</p>
-    </footer>
-  </div>
+    <!-- ══ WHY JTBD ══ -->
+    <div class="case-study-section">
+      <div class="columns">
+        <div>
+          <h2>Why <span>Jobs To Be Done</span> — and why it was the right choice</h2>
+          <p>The team's instinct going into this research was to ask: what features are missing? But that framing assumed the problem was feature gaps. The research needed to answer a different question: <span>what are these expert users actually trying to accomplish in their professional workflow, and where does the platform fail to serve those jobs?</span></p>
+          <p>JTBD was the right framework because actuaries and data scientists brought strong, established professional practices to the tool. They weren't building new habits — they were trying to fit the platform into existing workflows with real professional stakes attached. Mapping their jobs before evaluating features meant the team would understand <span>what self-sufficiency actually required</span>, not just what users complained about.</p>
+          <p>Before scoping the research I met with the PM, designer, front-end developer, data scientists, and data engineers to surface their assumptions and align on the decisions the research needed to support. That conversation shaped the research objectives and ensured findings would map to decisions the team was ready to make.</p>
+        </div>
+        <div>
+          <img src="images/case-study-4/research-framework.png" alt="Research Framework" class="case-study-image">
+          <p class="img-caption">JTBD framework — mapping functional jobs, emotional needs, and professional stakes alongside workflow steps for each user role.</p>
+        </div>
+      </div>
 
-  <script src="js/main.js"></script>
+      <div class="method-block">
+        <div class="method-block-label">Methodology detail</div>
+        <p>Semi-structured interviews and observational studies with actuaries and data scientists — two distinct user roles with different jobs, different professional accountabilities, and different relationships with the platform's outputs. Participants walked through live prediction workflows while verbalizing their reasoning, surfacing the gap between what the platform provided and what their jobs required. Usability testing ran post-design-change to validate improvements. Secondary study on predictive analytics in healthcare provided domain context before fieldwork began.</p>
+      </div>
+    </div>
+
+    <!-- ══ DATA ANALYSIS ══ -->
+    <div class="case-study-section">
+      <h2>Data analysis</h2>
+      <p><span>Thematic Analysis</span> — Identifying patterns and themes across both user roles</p>
+      <p><span>Affinity Mapping</span> — Clustering user insights by job, motivation, and friction point</p>
+      <p><span>User Journey Mapping</span> — Tracking the full prediction workflow step by step, surfacing exactly where and why users needed internal support</p>
+      <div class="columns three" style="margin-top:1.25rem">
+        <div>
+          <img src="images/case-study-4/data-1.png" alt="Thematic analysis" class="case-study-image">
+        </div>
+        <div>
+          <img src="images/case-study-4/data-2.png" alt="Affinity mapping" class="case-study-image">
+        </div>
+        <div>
+          <img src="images/case-study-4/data-3.png" alt="User journey mapping" class="case-study-image">
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ FINDINGS ══ -->
+    <div class="case-study-section">
+      <h2>Three jobs the platform wasn't supporting — and what that meant for the <span>roadmap</span></h2>
+      <p>Findings were structured around the jobs users needed to complete — not the features they mentioned. Each job surfaced a specific gap between what the platform provided and what self-sufficient operation required.</p>
+
+      <div class="insight-grid">
+
+        <div class="insight-card full">
+          <div class="insight-num">01</div>
+          <div class="insight-job">Job — Trust the data before modeling</div>
+          <div class="insight-title">Data scientists spent ~70% of their time on data cleaning — before any modeling could begin</div>
+          <p class="insight-body">The platform ingested data from electronic health records and insurance claims systems that frequently had mismatches, gaps, and inconsistencies. Before data scientists could run a single prediction, they needed to manually audit and clean the inputs. <span>This wasn't an edge case — it was the dominant activity in their workflow.</span> A platform that required most of a user's time on infrastructure rather than analysis could not be a self-serve product; it was a data-engineering project with a UI on top.</p>
+          <p class="insight-body">This finding repositioned data pipeline automation from a future improvement to a prerequisite for productization. Until users could trust the data without manual intervention, everything else in the platform was downstream of a problem the product wasn't solving.</p>
+          <span class="insight-shift">Automate data pipelines; build a dashboard that surfaces data health status before users begin modeling</span>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-num">02</div>
+          <div class="insight-job">Job — Explain the model's reasoning</div>
+          <div class="insight-title">The algorithm produced predictions users couldn't defend — making internal support mandatory</div>
+          <p class="insight-body">Actuaries don't just use predictions — they present them to executives and regulators who demand to know how a number was reached. In a regulated industry, an unexplained output isn't just frustrating; it's unusable.</p>
+          <p class="insight-body">The platform's algorithm produced accurate predictions but gave users no window into its reasoning. <span>Every time an actuary needed to report on a result, they went back to internal data scientists to reconstruct the logic.</span> This was the single largest driver of consulting dependency — not a feature gap, but a fundamental mismatch between what the algorithm output and what professional accountability required.</p>
+          <div class="insight-quote">"We can't just tell regulators the model said so. We need to show our work — and right now, the platform doesn't give us anything to show."</div>
+          <span class="insight-shift">Embed explanation layers in model outputs — translating algorithm reasoning into narratives actuaries can use directly in reporting</span>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-num">03</div>
+          <div class="insight-job">Job — Collaborate across functions without losing fidelity</div>
+          <div class="insight-title">Cross-functional work happened outside the platform entirely — creating version conflicts and error risk</div>
+          <p class="insight-body">Refining premium predictions required actuaries and data scientists to align on assumptions, share results, and track changes across teams. None of this happened inside the platform.</p>
+          <div class="insight-quote">"We email Excel files back and forth and hope nothing breaks."</div>
+          <p class="insight-body">When collaboration falls back to email and spreadsheets, the platform has effectively been abandoned for the most consequential part of the workflow. <span>A self-serve product has to support the full job — including the handoffs.</span> A tool that handles analysis but not collaboration will always require a workaround layer.</p>
+          <span class="insight-shift">Introduce collaboration hubs — shared workspaces with version tracking that replace the email-and-spreadsheet layer</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══ IMPACT ══ -->
+    <div class="case-study-section">
+      <h2>What changed because of this <span>research</span></h2>
+      <p>The findings produced three concrete shifts in how the team understood the product and what it needed to become.</p>
+
+      <div class="impact-grid">
+        <div class="impact-cell">
+          <div class="impact-num">01</div>
+          <div class="impact-title">The productization roadmap got a new first priority</div>
+          <p class="impact-body">Before this research, data pipeline automation was a background infrastructure concern. Surfacing that it consumed ~70% of users' working time repositioned it as the most urgent investment — the blocker behind which everything else was stuck. The team shifted roadmap priority accordingly.</p>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num">02</div>
+          <div class="impact-title">Role-specific design replaced generic feature planning</div>
+          <p class="impact-body">The JTBD mapping surfaced that actuaries and data scientists had fundamentally different jobs within the same platform. Actuaries needed explainability for external reporting. Data scientists needed data trust for internal modeling. The research gave the team a framework for role-specific decisions that reduced guesswork and rework in future product cycles.</p>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num">03</div>
+          <div class="impact-title">A design principle for all algorithm-facing features</div>
+          <p class="impact-body">The research established a foundation that shaped future algorithm-related design decisions: the platform's success should not be measured by prediction accuracy alone, but by whether expert users can interrogate, explain, and act on those predictions independently. This principle became the team's reference point for evaluating future feature work.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>"The best algorithm for expert users in regulated industries isn't the most accurate — it's the one that makes experts more capable of doing their most accountable work."</p>
+      </div>
+    </div>
+
+    <!-- ══ REFLECTION ══ -->
+    <div class="case-study-section">
+      <div class="columns">
+        <div>
+          <h2>Reflection</h2>
+          <p>The most important decision in this project was <span>choosing JTBD over a feature audit</span>. The team arrived with hypotheses about missing features. The research revealed that the barriers to self-sufficiency weren't feature gaps — they were structural mismatches between what the platform provided and what professional accountability required. A feature audit would have produced a different list and a different roadmap. The framework choice changed the direction of the work.</p>
+        </div>
+        <div>
+          <h2>Future study</h2>
+          <p>The JTBD research established clear priorities, but without measuring users' <span>perceived importance of each job</span> across a larger sample, roadmap prioritization rests on qualitative signal alone. I'd follow up with a <span>quantitative study</span> measuring perceived importance across user roles — both to stress-test the priorities and to give leadership a statistical basis for sequencing a phased rollout of new features.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.case-study-container -->
+
+  <footer>
+    <p>© 2025 April Yang</p>
+  </footer>
+
+</div><!-- /.container -->
 </body>
 </html>

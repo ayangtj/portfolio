@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Improving User Retention – UX Research | April Yang</title>
+  <meta name="description" content="UX research case study on improving Day 1 user retention through onboarding evaluation">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case-study-3.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body>
+
+<div class="cs-nav">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+</div>
+
+<main class="case">
+
+  <!-- HEADER -->
+  <header class="case-header">
+    <p class="case-eyebrow">Consumer App · Evaluative · Retention</p>
+    <h1 class="case-page-title">When the obvious research path was blocked, finding another way to answer the retention question</h1>
+    <p class="case-summary">
+      Day 1 retention was tanking. The instinct was to talk to users who left —
+      but low market share made lapsed users impossible to recruit. Rather than
+      stall, I reframed the question entirely: instead of asking why users left,
+      I tested whether users could perceive the browser's core value before they
+      had a reason to leave. That pivot unlocked the evidence the team needed
+      to move from debate to action.
+    </p>
+    <div class="case-meta">
+      <div class="meta-item">
+        <div class="meta-label">My role</div>
+        <div class="meta-value">End-to-end UX Research</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Type</div>
+        <div class="meta-value">Evaluative · Hypothesis testing</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Sample</div>
+        <div class="meta-value">n=120, between-participants</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Collaborators</div>
+        <div class="meta-value">Product, Design, Growth</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- IMPACT BAR -->
+  <div class="impact-bar">
+    <div class="impact-bar-label">Research impact</div>
+    <ul class="impact-list">
+      <li>Reframed an unanswerable research question into a testable one — unblocking a retention investigation that had stalled at the data layer</li>
+      <li>Identified the specific onboarding moments causing Day 1 drop-off — shifting the team from guessing to a targeted fix list</li>
+      <li>Validated that the new onboarding design significantly outperformed the original across 3 of 4 targeted attributes, including perceived core value and navigation clarity</li>
+      <li>Gave leadership statistical confidence to adopt the new design as the preferred flow — ending months of incremental debate</li>
+      <li>Moved the team to a resourced, retention-focused roadmap with A/B testing as the next measurable milestone</li>
+    </ul>
+  </div>
+
+  <!-- CHALLENGE -->
+  <section class="case-section">
+    <h2>The challenge</h2>
+    <p>
+      Day 1 retention was a critical business problem. Analytics showed a
+      <span class="highlight">significant drop in users on their first day</span>
+      after installing the browser. The natural first move was an uninstall survey —
+      ask people who left why they left. The results came back ambiguous:
+      users simply said they preferred another browser. Technically accurate,
+      but not actionable. It told us nothing about what specifically failed during
+      their experience or what could be fixed.
+    </p>
+    <p>
+      The conventional next step would have been a qualitative deep-dive —
+      recruiting lapsed users for interviews to uncover the real reasons behind
+      "I just prefer Chrome." <span class="highlight">But the browser's low market share
+      made recruiting lapsed users effectively impossible.</span> There weren't enough
+      of them to find, and those who had uninstalled had no reason to re-engage
+      for a research session. The standard research path was blocked.
+    </p>
+    <p>
+      Meanwhile, the design team had built a new onboarding experience they
+      believed would fix the problem. Leadership wasn't ready to commit without
+      evidence — and the team was stuck in iterative debate with no clear
+      way forward.
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- THE PIVOT -->
+  <section class="case-section">
+    <h2>Reframing the question</h2>
+    <p>
+      Rather than waiting for a recruiting solution that didn't exist, I
+      <span class="highlight">reframed the research question entirely</span>.
+      If we couldn't study users after they left, we could study users
+      before they had a reason to leave — specifically, whether new users
+      could perceive the browser's core value during their earliest moments
+      with the product.
+    </p>
+    <p>
+      This wasn't a compromise. It was a more precise question. Previous research
+      had already pointed to two root causes of drop-off: users weren't perceiving
+      core value after initial exploration, and the onboarding flow felt random and
+      unpredictable. <span class="highlight">If those were the real drivers of churn,
+      then testing whether the new design fixed them was a direct test of the
+      retention hypothesis</span> — without needing a single lapsed user in the room.
+    </p>
+    <p>
+      I worked with design, product, and growth to define
+      <span class="highlight">four specific attributes the new design aimed to improve</span>:
+      perceived core value, identity association, navigation clarity, and early
+      task completion. These became the measurement framework — turning a vague
+      "does it feel better?" question into something the team could evaluate,
+      debate, and act on with confidence.
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- APPROACH -->
+  <section class="case-section">
+    <h2>Study design</h2>
+    <p>
+      With the question reframed, I designed a <span class="highlight">comparative
+      evaluation study</span> — the fastest way to produce statistically defensible
+      evidence under time pressure. New users were the right population: available,
+      motivated, and experiencing the onboarding fresh. The between-participants
+      design meant each person saw only one version, eliminating order effects
+      that could contaminate the comparison.
+    </p>
+
+    <div class="method-block">
+      <div class="method-block-label">Methodology detail</div>
+      <p>Unmoderated testing, between-participants (n=120): control group on shipped onboarding, treatment group on new design. Criterion sampling based on power user personas — usage patterns, past behavior, and value recognition. Mann-Whitney U Test for non-parametric comparison of user attitude across the two conditions. Journey maps used to track attention, emotion, and behavior at each onboarding step.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- WHAT WE WERE TESTING -->
+  <section class="case-section">
+    <h2>What we were testing — and why it mattered</h2>
+    <p>
+      The study was designed around two core questions the team had struggled
+      to answer without evidence:
+    </p>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <div class="insight-num">Q1</div>
+        <div class="insight-title">Does the new design help users understand what the browser is for?</div>
+        <p class="insight-body">Previous research showed users left because they couldn't see the value of switching to a new browser. If the new onboarding couldn't fix that, no amount of polish would improve Day 1 retention.</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-num">Q2</div>
+        <div class="insight-title">Is the improvement significant enough to justify committing resources to ship it?</div>
+        <p class="insight-body">Directional signals weren't enough — leadership needed statistical evidence. The study was designed to produce a verdict, not a recommendation: does the data support shipping this design or not?</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- FINDINGS -->
+  <section class="case-section">
+    <h2>What the data showed</h2>
+    <p>
+      The new design won — clearly and measurably. Findings were presented to
+      design, product, and growth stakeholders in a <span class="highlight">dedicated
+      review session structured around implications and decisions</span>, not just
+      results.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat-cell">
+        <div class="stat-big">3 / 4</div>
+        <div class="stat-desc">Targeted attributes where the new design scored significantly higher</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-big">↑</div>
+        <div class="stat-desc">Statistically significant improvement in perceived core value and navigation clarity</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-big">✓</div>
+        <div class="stat-desc">Alternative hypothesis accepted — results were not due to chance</div>
+      </div>
+    </div>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <div class="insight-num">01</div>
+        <div class="insight-title">Users understood the browser's value earlier</div>
+        <p class="insight-body">In the new design, participants identified the browser's core purpose faster and with more confidence. The value that previously wasn't landing during initial exploration was now registering at the right moment in the flow.</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-num">02</div>
+        <div class="insight-title">Navigation felt intentional, not random</div>
+        <p class="insight-body">The new flow addressed the "random and messy" pattern from previous research. Participants moved through onboarding with fewer wrong turns and less confusion about what to do next.</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-num">03</div>
+        <div class="insight-title">One attribute still needs work</div>
+        <p class="insight-body">The fourth targeted attribute — identity association — didn't improve significantly. Rather than treat this as a failure, the team flagged it as the next design challenge, with a dedicated exploration now on the roadmap.</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-num">04</div>
+        <div class="insight-title">The evidence ended the debate</div>
+        <p class="insight-body">Before this study, the team was caught in iterative tweaks without a clear direction. The comparative data gave leadership a concrete basis to decide: adopt the new design, refine the one remaining gap, and move toward development.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- FROM FINDINGS TO ACTION -->
+  <section class="case-section">
+    <h2>From findings to action</h2>
+    <p>
+      The study didn't just produce a report — it produced a <span class="highlight">clear,
+      agreed-upon plan</span> that the design, product, and growth teams aligned
+      on immediately after the insight review.
+    </p>
+
+    <div class="next-row">
+      <div class="next-item">
+        <span class="next-arrow">→</span>
+        <div>
+          <p class="next-text">Polish the new design based on specific research findings</p>
+          <p class="next-sub">Particular attention to the moments where users still showed confusion, surfaced through journey mapping</p>
+        </div>
+      </div>
+      <div class="next-item">
+        <span class="next-arrow">→</span>
+        <div>
+          <p class="next-text">Continue exploring the fourth attribute — identity association</p>
+          <p class="next-sub">Dedicated design exploration now on the roadmap, informed by where the current design fell short</p>
+        </div>
+      </div>
+      <div class="next-item">
+        <span class="next-arrow">→</span>
+        <div>
+          <p class="next-text">Move the refined design into development</p>
+          <p class="next-sub">Leadership committed resources with the new design as the preferred flow — not a candidate for further debate</p>
+        </div>
+      </div>
+      <div class="next-item">
+        <span class="next-arrow">→</span>
+        <div>
+          <p class="next-text">A/B test on Day 1 retention as the next measurable milestone</p>
+          <p class="next-sub">Onboarding version as the controllable variable; Day 1 retention rate as the outcome metric — closing the loop between this research and the original business problem</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="method-block">
+      <div class="method-block-label">Why the A/B test matters</div>
+      <p>This study proved the new design performed better in a controlled research setting. The A/B test will prove it in the wild — connecting usability improvement directly to the retention metric that started this project. That's the full loop: analytics surfaced the problem, research diagnosed it and validated a solution, live testing will confirm the business impact.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- REFLECTION -->
+  <section class="case-section">
+    <h2>Looking back</h2>
+    <p>
+      The most consequential decision in this project wasn't methodological —
+      it was recognizing when to stop pursuing the ideal study design and find
+      a better question instead. The instinct to recruit lapsed users for
+      qualitative interviews was correct in theory. Pursuing it despite an
+      insurmountable recruiting constraint would have stalled the team for months
+      with nothing to show for it.
+    </p>
+    <p>
+      <span class="highlight">Reframing from "why did users leave?" to "can users
+      perceive value before they have a reason to leave?"</span> wasn't a
+      concession — it was a sharper question that produced more actionable
+      evidence. The uninstall survey told us users preferred other browsers.
+      The reframed study told us exactly which moments in the experience
+      were failing to make the case for this one.
+    </p>
+    <p>
+      What I'd carry forward: treat ambiguous exit data as a signal to
+      reframe the research question, not just a gap to fill with more data
+      collection. The lapsed user problem is common in low-market-share
+      consumer products — having a playbook for working around it is
+      increasingly essential.
+    </p>
+  </section>
+
+</main>
+
+</body>
+</html>

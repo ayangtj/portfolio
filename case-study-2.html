@@ -1,335 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brave Wallet Onboarding Usability Research and Design | April Yang</title>
+  <title>Brave Wallet Onboarding – UX Research &amp; Design | April Yang</title>
   <meta name="description" content="UX research and design case study on improving the crypto wallet onboarding experience">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case-study-2.css">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
-<body class="theme-red" id='cs2'>
-  <div class="container">
-    <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
 
-    <header class="case-study-header">
-      <h1>Brave Wallet Onboarding Usability Evaluation Research and Design</h1>
-      <p>#End-to-end #UXResearch #Wireframing #UsabilityTesting #Thinkaloud #Time-on-task #Onboarding-quant-data</p>
-    </header>
+<body>
 
-    <div class="case-study-container">
-      <div class="case-study-section">
-        <div class='columns'>
-          <div>
-            <p style='text-align: center'>Before</p>
-            <img src="images/case-study-2/before.png" alt="Brave Wallet UI" class="case-study-image">
-          </div>
-          <div>
-            <p style='text-align: center'>After</p>
-            <img src="images/case-study-2/after.png" alt="Brave Wallet UI" class="case-study-image">
-          </div>
-        </div>
+<div class="cs-nav">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+</div>
+
+<main class="case">
+
+  <!-- HEADER -->
+  <header class="case-header">
+    <p class="case-eyebrow">Crypto · Web3 · Usability Research &amp; Design</p>
+    <h1 class="case-page-title">Turning a routine usability study into measurable onboarding improvement for Brave Wallet</h1>
+    <p class="case-summary">
+      Crypto wallet onboarding is uniquely high-stakes — one confusing step
+      around the recovery phrase can cost the user their assets permanently.
+      I worked with product and design to identify exactly where novice users
+      were breaking down, produced wireframe solutions, and tracked the impact
+      of design changes with post-ship analytics. What started as a usability
+      evaluation became a closed loop from research to measurable retention improvement.
+    </p>
+    <div class="case-meta">
+      <div>
+        <div class="meta-label">My role</div>
+        <div class="meta-value">End-to-end Research &amp; Wireframing</div>
+      </div>
+      <div>
+        <div class="meta-label">Methods</div>
+        <div class="meta-value">Unmoderated usability testing · Funnel analysis · Think aloud</div>
+      </div>
+      <div>
+        <div class="meta-label">Sample</div>
+        <div class="meta-value">n=5, novice Web3 users</div>
+      </div>
+      <div>
+        <div class="meta-label">Collaborators</div>
+        <div class="meta-value">Product, Design, Data Engineering</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BEFORE / AFTER HERO -->
+  <div class="before-after">
+    <div class="ba-block">
+      <span class="ba-label before">Before</span>
+      <img src="images/case-study-2/before.png" alt="Brave Wallet onboarding — before">
+      <p class="ba-caption">Original recovery phrase flow: generation and verification screens looked nearly identical, creating confusion at a security-critical moment.</p>
+    </div>
+    <div class="ba-block">
+      <span class="ba-label after">After</span>
+      <img src="images/case-study-2/after.png" alt="Brave Wallet onboarding — after">
+      <p class="ba-caption">Redesigned flow: visually distinct screens, reduced verification load. Drop-off at the recovery phrase step showed statistically significant improvement post-ship.</p>
+    </div>
+  </div>
+
+  <!-- IMPACT BAR -->
+  <div class="impact-bar">
+    <div class="impact-bar-label">Research impact</div>
+    <ul class="impact-list">
+      <li>Shaped the research scope by drawing out designer and PM risk assessments before writing a single objective — focusing the study on the highest-risk steps before testing began</li>
+      <li>Identified four specific friction points in the onboarding flow, including a critical confusion between seed generation and seed verification screens</li>
+      <li>Produced wireframe explorations across two solution directions, giving design concrete options rather than open-ended feedback</li>
+      <li>Post-ship analytics confirmed the recovery phrase redesign produced a statistically significant reduction in drop-off — closing the loop from usability finding to business outcome</li>
+    </ul>
+  </div>
+
+  <!-- CONTEXT -->
+  <section class="case-section">
+    <h2>Why this mattered</h2>
+    <p>
+      In 2022, Brave was growing its wallet product with a specific challenge:
+      most crypto users live on exchanges like Coinbase or Binance and have never
+      used a self-custody Web3 wallet. <span class="hl">Moving users from exchange
+      to wallet means introducing concepts that have no real-world analogue</span>
+      — and getting them wrong isn't just confusing, it's consequential.
+    </p>
+    <p>
+      A recovery phrase — also called a seed phrase — is a 12-word sequence
+      that is the only way to recover a wallet if a device is lost or reset.
+      <span class="hl">If a user loses it, their assets are gone permanently.
+      If they misunderstand what it is during onboarding, they may not protect it.</span>
+      This made the seed phrase step the highest-stakes moment in the entire
+      onboarding flow — and the most important one to get right for both
+      retention and user safety.
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- SCOPING -->
+  <section class="case-section">
+    <h2>Scoping the study with stakeholders — before writing a single objective</h2>
+    <p>
+      Before defining research objectives, I ran a stakeholder alignment session
+      with the product manager and designer. Rather than receiving a brief,
+      <span class="hl">I actively drew out where they believed the highest
+      risks and challenges for users would be</span> — asking them to surface
+      their own assumptions and concerns about the onboarding flow.
+    </p>
+    <p>
+      This surfaced two distinct risk areas the team was uncertain about,
+      which became the direct basis for the research objectives:
+    </p>
+
+    <div class="risk-row">
+      <div class="risk-cell">
+        <div class="risk-label">Risk 1 — Friction</div>
+        <p class="risk-text">Where does the onboarding flow create unnecessary friction — steps that feel confusing, slow, or unclear regardless of Web3 experience?</p>
+      </div>
+      <div class="risk-cell">
+        <div class="risk-label">Risk 2 — Comprehension</div>
+        <p class="risk-text">How well do novice users actually understand what they're doing during onboarding — especially around concepts like the recovery phrase that have no everyday equivalent?</p>
+      </div>
+    </div>
+
+    <p>
+      The seed phrase was named explicitly in that conversation as the step
+      most likely to cause both friction and comprehension failure.
+      <span class="hl">That alignment meant the study was focused on the
+      highest-risk steps before a single test was run</span> — not discovered
+      after the fact.
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- STUDY DESIGN -->
+  <section class="case-section">
+    <h2>Study design</h2>
+    <p>
+      I recruited across two novice segments — users new to Web3 wallets
+      but aware of them, and crypto exchange users with no Web3 wallet experience
+      at all. This distinction mattered: exchange users represent Brave's most
+      valuable growth opportunity, and their onboarding experience is meaningfully
+      different from someone who's heard of seed phrases before.
+    </p>
+    <p>
+      I chose <span class="hl">unmoderated testing specifically to reduce the
+      Hawthorne effect</span> — the well-documented tendency for participants
+      to behave differently when observed. For a test that relied on natural
+      reactions to confusing steps, eliminating researcher presence was more
+      important than being able to ask follow-up questions in the moment.
+      Think-aloud protocol captured the reasoning behind each action without
+      requiring a moderator.
+    </p>
+    <p>
+      Alongside the usability sessions, I <span class="hl">partnered with
+      data engineers to instrument anonymous analytics</span> around the
+      onboarding funnel — tracking exactly which steps users dropped off at.
+      This gave us a quantitative baseline before any design changes, and
+      a measurement layer for after.
+    </p>
+
+    <div class="method-block">
+      <div class="method-block-label">Methodology detail</div>
+      <p>Unmoderated usability testing on Userlytics (n=5, novice Web3 users). Two recruiting segments: Web3-aware novices (1 or no wallets) and crypto exchange users (no Web3 wallet). Think-aloud protocol throughout. Funnel analysis on anonymised analytics data instrumented with data engineering. Post-ship analysis used Chi-Square Test on ordinal drop-off data to measure statistical significance of design changes.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- FINDINGS -->
+  <section class="case-section">
+    <h2>What we found — four friction points, one critical</h2>
+    <p>
+      Findings were shared with the designer and PM in a review session
+      before wider distribution — giving them space to discuss implications
+      and challenge interpretations before decisions were made.
+    </p>
+
+    <div class="insight-grid">
+
+      <div class="insight-card">
+        <div class="insight-num">01</div>
+        <div class="insight-title">Password criteria were invisible until you failed</div>
+        <p class="insight-body">Requirements weren't surfaced until a user submitted a non-compliant password. Participants repeatedly missed criteria they couldn't see, creating a frustrating trial-and-error loop at the very first step.</p>
+        <span class="insight-action">Interactive real-time criteria indicator</span>
       </div>
 
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <div class='columns'>
-          <div>
-            <h2>Background</h2>
-            <p>In 2022, our teams focused on improving Brave Wallet, with the goals of growing its user base, reducing friction, and improving its visual appeal.</p>
-            <p>This study aims to streamline the Brave Wallet onboarding experience by identifying and addressing any pain point and friction uncovered, ultimately making it easier and more intuitive for users to navigate and understand the platform.</p>
-          </div>
-          <div>
-            <h2>Problem Solving</h2>
-            <p style='font-size: smaller'>💬 I synced up with the stakeholders, product and design, to get aligned on the focus of the study. I encouraged them to consider and share their perspectives on which aspects of the onboarding process might present the highest risks or challenges for users.</p>
-            <ul>
-              <li>What frictions do users have going through wallet onboarding?</li>
-              <li>How well do novice users comprehend the onboarding flow?</li>
-            </ul>
-          </div>
-        </div>
+      <div class="insight-card">
+        <div class="insight-num">02</div>
+        <div class="insight-title">Seed generation and verification looked identical — at a critical security moment</div>
+        <p class="insight-body">The two screens served opposite purposes: one shows your phrase to copy, the other asks you to confirm it. But visually they were nearly the same. Participants consistently lost their place — unsure whether they were still reading or now being tested. For a step with permanent consequences if done incorrectly, this was the most serious finding.</p>
+        <span class="insight-action">Visually distinct screens + reduced verification load</span>
       </div>
 
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <h2>Research Objectives</h2>
-        <div class='columns'>
-          <div>
-            <p style='font-size: smaller'>💬 I then translated stakeholders' concerns into research objectives, which shaped my research framework and provided a clear path for uncovering insights to improve the Brave Wallet onboarding experience.</p>
-          </div>
-          <div style='flex: 2;'>
-            <ol style='margin: 0 20px;'>
-              <li>Identify user friction points during onboarding, with a focus on Web3-specific elements such as the recovery phrase.</li>
-              <li>Assess design comprehension throughout the onboarding process, particularly for novice users.</li>
-            </ol>
-          </div>
-        </div>
+      <div class="insight-card">
+        <div class="insight-num">03</div>
+        <div class="insight-title">The recovery phrase imposed unsustainable cognitive load</div>
+        <p class="insight-body">Memorizing and re-entering all 12 words in exact order is genuinely hard. Time-on-task data showed participants spending far longer than expected on this step — not because of design confusion alone, but because the task itself was too demanding for first-time users without crypto experience.</p>
+        <span class="insight-action">Verify 3 of 12 words, reducing load without sacrificing security intent</span>
       </div>
 
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <h2>Research Methods</h2>
-        <div class='columns'>
-          <div>
-            <p style='font-size: smaller'>💬 To mitigate the Hawthorne effect (the researcher effect), I decided to make the usability testing unmoderated to create the most natural context of use for the participants.</p>
-          </div>
-          <div style='flex: 2;'>
-            <ul style='margin: 0 20px;'>
-              <li>Usability Testing (Unmoderated)</li>
-              <li>Think Aloud</li>
-              <li>Funnel Analysis (to measure changes) </li>
-            </ul>
-          </div>
-        </div>
+      <div class="insight-card">
+        <div class="insight-num">04</div>
+        <div class="insight-title">The final transition left users uncertain they'd succeeded</div>
+        <p class="insight-body">After completing onboarding, users were dropped into the portfolio page with no confirmation of completion. Novice users — already uncertain about what they'd just done — had no signal that onboarding was finished and the wallet was ready to use.</p>
+        <span class="insight-action">Welcome state with explicit completion confirmation</span>
       </div>
 
-      <hr style='margin: 35px 0' />
+    </div>
+  </section>
 
-      <div class="case-study-section">
-        <h2>Sampling & Recruiting</h2>
-        <div class='columns'>
-          <div style='border-right: 1px dashed grey; margin-bottom: 20px; text-align: right; padding-right: 20px'>
-            <h4>Recruiting Criteria</h4>
-          </div>
-          <div style='flex: 4; font-size: smaller;'>
-            <ol style='margin: 0 20px;'>
-              <li>Novice Web3 users who are new to Web3 wallets</li>
-                <ol type='a' style='margin: 0 20px;'>
-                  <li>Having awareness of Web3 wallets</li>
-                  <li>Using 1 or no Web3 wallet</li>
-                </ol>
-              <li>Crypto exchange users who are not yet integrate into the Web3 space</li>
-                <ol type='a' style='margin: 0 20px;'>
-                  <li>Low awareness of Web3 wallet</li>
-                  <li>Transacting on crypto exchanges recently</li>
-                  <li>Having no Web3 wallet</li>
-                </ol>
-            </ol>
-          </div>
-        </div>
+  <hr class="rule">
 
-        <div class='columns'>
-          <div style='border-right: 1px dashed grey; margin-bottom: 20px; text-align: right; padding-right: 20px'>
-            <h4>Sample</h4>
-          </div>
-          <div style='flex: 4; font-size: smaller; '>
-            <p>n=5</p>
-            <p>Sampling method — simple random sampling </p>
-          </div>
-        </div>
+  <!-- WIREFRAMING -->
+  <section class="case-section">
+    <h2>From findings to solutions — wireframing the seed phrase fix</h2>
+    <p>
+      Rather than handing design a list of problems, <span class="hl">I produced
+      wireframe explorations across two distinct solution directions</span> for
+      the most critical finding — the seed generation and verification confusion.
+      This gave the design team concrete options with different trade-offs to
+      evaluate, rather than open-ended feedback to interpret.
+    </p>
 
-        <div class='columns'>
-          <div style='border-right: 1px dashed grey; margin-bottom: 20px; text-align: right; padding-right: 20px'>
-            <h4>Outreach</h4>
-          </div>
-          <div style='flex: 4; font-size: smaller;'>
-            <p>Released screener to randomly selected Brave users</p>
-          </div>
-        </div>
+    <!-- Original -->
+    <div class="wf-set">
+      <p class="wf-label">Original design — the problem</p>
+      <p class="wf-sub">Generation and verification screens share the same visual structure. A user who loses context mid-flow cannot tell which step they're on.</p>
+      <div class="wf-row cols-2">
+        <img src="images/case-study-2/wireframe-1.png" alt="Original seed generation screen">
+        <img src="images/case-study-2/wireframe-2.png" alt="Original seed verification screen">
+      </div>
+    </div>
 
-        <div class='columns'>
-          <div style='border-right: 1px dashed grey; margin-bottom: 20px; text-align: right; padding-right: 20px'>
-            <h4>Incentives</h4>
-          </div>
-          <div style='flex: 4; font-size: smaller;'>
-            <p>Gift cards distributed via email</p>
-          </div>
-        </div>
+    <!-- Solution 1 -->
+    <div class="wf-set">
+      <p class="wf-label">Solution 1 — Visual differentiation via dysmorphic seed display</p>
+      <p class="wf-sub">The generation screen presents the seed in a visually distinct shape — immediately recognisable as different from the verification screen, which retains the fill-in format. Addresses the confusion problem without changing the task load.</p>
+      <div class="wf-row cols-2">
+        <img src="images/case-study-2/wireframe-3.png" alt="Solution 1 — generation with dysmorphic display">
+        <img src="images/case-study-2/wireframe-2.png" alt="Solution 1 — verification unchanged">
+      </div>
+    </div>
 
-        <div class='columns'>
-          <div style='border-right: 1px dashed grey; margin-bottom: 20px; text-align: right; padding-right: 20px'>
-            <h4>Non-Disclosure Agreement (NDA)</h4>
-          </div>
-          <div style='flex: 4; font-size: smaller;'>
-            <p>Specified data that would be collected in this research, ensured that participants agree not to disclose any proprietary or sensitive information they may encounter during the research</p>
-          </div>
+    <!-- Solution 2 -->
+    <div class="wf-set">
+      <p class="wf-label">Solution 2 — Reduced verification load (3 of 12 words)</p>
+      <p class="wf-sub">Instead of verifying all 12 words in order, users confirm 3 randomly selected words. Simultaneously differentiates the two screens and dramatically reduces cognitive load — addressing findings 02 and 03 in a single design decision.</p>
+      <div class="wf-row cols-4">
+        <img src="images/case-study-2/wireframe-1.png" alt="Solution 2 — step 1">
+        <img src="images/case-study-2/wireframe-4.png" alt="Solution 2 — step 2">
+        <img src="images/case-study-2/wireframe-5.png" alt="Solution 2 — step 3">
+        <img src="images/case-study-2/wireframe-6.png" alt="Solution 2 — step 4">
+      </div>
+    </div>
+
+    <div class="callout">
+      <p>Solution 2 was the stronger strategic choice: it solved two problems simultaneously — screen differentiation and cognitive overload — without adding design complexity. The team aligned on this direction after reviewing both options against the research findings.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- DESIGN CHANGES -->
+  <section class="case-section">
+    <h2>Design changes that shipped</h2>
+    <p>
+      After reviewing both wireframe directions with the designer and PM,
+      the team finalized three sets of design changes — each mapped directly
+      to a research finding.
+    </p>
+
+    <!-- Password -->
+    <div class="before-after" style="margin-top: 1.5rem;">
+      <div class="ba-block">
+        <span class="ba-label before">Before</span>
+        <img src="images/case-study-2/design-1.png" alt="Password — before">
+        <p class="ba-caption">Static criteria — only visible after a failed attempt.</p>
+      </div>
+      <div class="ba-block">
+        <span class="ba-label after">After</span>
+        <img src="images/case-study-2/design-2.png" alt="Password — after">
+        <p class="ba-caption"><strong>Interactive real-time indicator</strong> — criteria visible and updating as the user types. Addresses finding 01.</p>
+      </div>
+    </div>
+
+    <!-- Seed phrase -->
+    <div class="before-after">
+      <div class="ba-block">
+        <span class="ba-label before">Before</span>
+        <img src="images/case-study-2/before.png" alt="Seed phrase — before">
+        <p class="ba-caption">Visually identical generation and verification screens.</p>
+      </div>
+      <div class="ba-block">
+        <span class="ba-label after">After</span>
+        <img src="images/case-study-2/after.png" alt="Seed phrase — after">
+        <p class="ba-caption"><strong>Visually distinct screens + 3-word verification</strong> — differentiates the steps and reduces cognitive load simultaneously. Addresses findings 02 and 03.</p>
+      </div>
+    </div>
+
+    <!-- Portfolio welcome -->
+    <div class="before-after">
+      <div class="ba-block">
+        <span class="ba-label before">Before</span>
+        <img src="images/case-study-2/design-3.png" alt="Portfolio transition — before">
+        <p class="ba-caption">Abrupt transition to portfolio with no completion signal.</p>
+      </div>
+      <div class="ba-block">
+        <span class="ba-label after">After</span>
+        <img src="images/case-study-2/design-4.png" alt="Portfolio transition — after">
+        <p class="ba-caption"><strong>Welcome state with completion confirmation</strong> — users know onboarding is done and the wallet is ready. Addresses finding 04.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- POST-SHIP -->
+  <section class="case-section">
+    <h2>Closing the loop — post-ship validation</h2>
+    <p>
+      Shipping design changes is not the end of the research job.
+      I ran two post-ship studies to confirm the changes worked in the wild,
+      not just in a controlled test environment.
+    </p>
+
+    <div class="outcome-row">
+      <div class="outcome-item">
+        <span class="outcome-arrow">→</span>
+        <div>
+          <p class="outcome-text">Re-ran the usability study on the redesigned onboarding</p>
+          <p class="outcome-sub">Improvements were observed across the friction points identified in the original study — participants moved through the seed phrase flow with less confusion and shorter time-on-task</p>
         </div>
       </div>
-
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <h2>Research Design</h2>
-        <p>Unmoderated testing is conducted on Userlytics where I defined preliminary testing requirements including testing device platform, video and audio recording enabled, and demographic requirements.</p>
-        <div style='font-size: small'>
-          <ol>
-            <li>Intro — Build report, set testing expectations, create a good  and open environment for participants.</li>
-            <li>[Verbal] Gauge participants' previous experience with Web3 wallets and crypto exchanges to identify subtle variations.</li>
-            <li>[Task 1] Set task scenario “you are about to explore a crypto wallet…”, ask participants to stop once password is set.  Verbalize their thoughts as they go.</li>
-              <ol type='a' style='margin: 0 0 6px 24px'>
-                <li>Measure <span class='green'>time-on-task</span></li>
-                <li>Measure <span class='green'>ease-of-use</span> via 7-point Likert scale question</li>
-                <li>Measure <span class='green'>pass-fail</span></li>
-              </ol>
-            <li>[Verbal] Uncover anything that was confusing or hard to do for the participants.</li>
-            <li>[Task 2] Continue from task 1, ask participants to proceed until the end. Verbalize their thoughts as they go.</li>
-              <ol type='a' style='margin: 0 0 6px 24px'>
-                <li>Measure <span class='green'>time-on-task</span></li>
-                <li>Measure <span class='green'>ease-of-use</span> via 7-point Likert scale question</li>
-                <li>Measure <span class='green'>pass-fail</span></li>
-              </ol>
-            <li>[Verbal] Uncover anything that was confusing or hard to do for the participants.</li>
-            <li>Verbal] Ask participants to describe the recovery phrase part based on their understanding, what it is and its purpose.</li>
-            <li>[Verbal] Uncover any questions participants may have along the way of onboarding but did not find answers to.</li>
-            <li>[Verbal] Gather any other thoughts via open-ended question.</li>
-          </ol>
-        </div>
-        <p>Analytics Data Collection - I partnered with data engineers to structure the anonymous analytics around user onboarding journey, specifically at which step did users drop off of the onboarding. </p>
-      </div>
-
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <h2>Data Analysis</h2>
-        <ol>
-          <li>Thematic Analysis — Identified recurring themes, captured deeper insights into users' frustration, confusion, and positive experience.</li>
-          <li>T-test Analysis — Compare Task Success Rate, Time On Task, Ease of Use of 2 versions of design.</li>
-          <li>Drop-Off Rate — Calculated the drop-off rate at each step by measuring the percentage of users who leave at that specific stage.</li>
-        </ol>
-      </div>
-
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <h2>Key Insights</h2>
-        <p>💬 I shared the key insights with the key stakeholders first for review, asked them to share their thoughts. #designers #PM</p>
-        <div class='columns' style='font-size: smaller'>
-          <div style='flex: 2; padding-right: 75px;'>
-            <ol>
-              <li>Passwords creation process lacked easily identifiable requirements, causing participants to miss the necessary criteria.</li>
-              <li>Recovery phrase seed generation and seed verification screens were too similar, leading to confusion when participants needed to verify the seed.</li>
-              <li>Recovery phrase process imposed a heavy cognitive load on users, resulting in long time-on-task rate.</li>
-              <li>Sudden transition to portfolio page left novice participants uncertain about their progress in the onboarding process.</li>
-            </ol>
-          </div>
-          <div>
-            <p><em>Action Items</em></p>
-            <ol>
-              <li>How might we make password creation criteria easily perceivable?</li>
-              <li>How might we make recovery phrase generation and verification process more seamless?</li>
-              <li>How might we welcome users to the portfolio page to make them feel confident and aware of their progress?</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <h2>Wireframing</h2>
-        <p>To address the research findings, I brainstormed some potential solutions to address the recovery phrase verification process via wireframing.</p>
-
-        <p style='font-size: smaller; font-weight: bold; margin-top: 35px;'>Original approach</p>
-        <div class='columns'>
-          <div>
-            <img src="images/case-study-2/wireframe-1.png" alt="Wireframe" class="case-study-image">
-          </div>
-          <div>
-            <img src="images/case-study-2/wireframe-2.png" alt="Wireframe" class="case-study-image">
-          </div>
-        </div>
-
-        <p style='font-size: smaller; font-weight: bold; margin-top: 35px;'>Solution 1 - The seed shows as a dysmorphic shape in the generation screen for quick recognition from the verification screen.</p>
-        <div class='columns'>
-          <div>
-            <img src="images/case-study-2/wireframe-3.png" alt="Wireframe" class="case-study-image">
-          </div>
-          <div>
-            <img src="images/case-study-2/wireframe-2.png" alt="Wireframe" class="case-study-image">
-          </div>
-        </div>
-
-        <p style='font-size: smaller; font-weight: bold; margin-top: 35px;'>Solution 2 - Ask users to fill in 3 words with the appointed order instead of 12 to decrease user task load.</p>
-        <div class='columns'>
-          <div>
-            <img src="images/case-study-2/wireframe-1.png" alt="Wireframe" class="case-study-image">
-          </div>
-          <div>
-            <img src="images/case-study-2/wireframe-4.png" alt="Wireframe" class="case-study-image">
-          </div>
-          <div>
-            <img src="images/case-study-2/wireframe-5.png" alt="Wireframe" class="case-study-image">
-          </div>
-          <div>
-            <img src="images/case-study-2/wireframe-6.png" alt="Wireframe" class="case-study-image">
-          </div>
-        </div>
-      </div>
-
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <h2>Design changes based on the key insights</h2>
-        <p>After reviewing and discussing potential solutions with the product designer and product manager, we finalized the design changes.</p>
-        <p>We decided to go with solution 3 which simultaneously differentiates the 2 screens and reduces user task load.</p>
-        <div class='columns' style='margin-top: 25px;'>
-          <div>
-            <p style='font-size: small; font-weight: bold; color: white'>Before = static password criteria</p>
-            <img src="images/case-study-2/design-1.png" alt="Wireframe" class="case-study-image">
-          </div>
-          <div>
-            <p style='font-size: small; font-weight: bold; color: white'>After - interactive password criteria indicator</p>
-            <img src="images/case-study-2/design-2.png" alt="Wireframe" class="case-study-image">
-          </div>
-        </div>
-
-        <div class='columns' style='margin-top: 25px;'>
-          <div>
-            <p style='font-size: small; font-weight: bold; color: white'>Before = static password criteria</p>
-            <img src="images/case-study-2/before.png" alt="Wireframe" class="case-study-image">
-          </div>
-          <div>
-            <p style='font-size: small; font-weight: bold; color: white'>After - interactive password criteria indicator</p>
-            <img src="images/case-study-2/after.png" alt="Wireframe" class="case-study-image">
-          </div>
-        </div>
-
-        <div class='columns' style='margin-top: 25px;'>
-          <div>
-            <p style='font-size: small; font-weight: bold; color: white'>Before = static password criteria</p>
-            <img src="images/case-study-2/design-3.png" alt="Wireframe" class="case-study-image">
-          </div>
-          <div>
-            <p style='font-size: small; font-weight: bold; color: white'>After - interactive password criteria indicator</p>
-            <img src="images/case-study-2/design-4.png" alt="Wireframe" class="case-study-image">
-          </div>
-        </div>
-      </div>
-
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <h2>Timeline</h2>
-        <img src="images/case-study-2/timeline.png" alt="Wireframe" class="case-study-image">
-      </div>
-
-      <hr style='margin: 35px 0' />
-
-      <div class="case-study-section">
-        <div class='columns'>
-          <div>
-            <h2>Constraints & Reflection</h2>
-            <p>Due to the limited budget for this research project, we had to carefully select a research method that fit within the constraints. With more resources, I would have increased the sample size to ensure statistically significant insights into user attitudes. This would allow for more robust analysis of the effect of design changes on users' perceived security of the Wallet, using the Mann-Whitney U Test to compare differences between groups and measure the impact effectively.</p>
-          </div>
-          <div>
-            <h2>Future Studies</h2>
-            <ol>
-              <li>I ran the same study on the new version of onboarding design, improvements were observed compared to the previous version.</li>
-              <li>Once design change was shipped and we had enough analytics on the new version, I ran an analysis to compare the drop off rate, the change of the recovery phrase was statistically significant. Since we worked with ordinal data, I used Chi-Square Test to analyze it.</li>
-            </ol>
-          </div>
+      <div class="outcome-item">
+        <span class="outcome-arrow">→</span>
+        <div>
+          <p class="outcome-text"><strong>Drop-off rate at the recovery phrase step showed statistically significant improvement</strong></p>
+          <p class="outcome-sub">Once sufficient analytics data had accumulated on the new design, I ran a Chi-Square Test on the drop-off data. The change to the recovery phrase step was statistically significant — connecting the usability finding directly to a measurable onboarding outcome</p>
         </div>
       </div>
     </div>
 
-    <footer>
-      <p>&copy; 2025 April Yang</p>
-    </footer>
-  </div>
+    <div class="stat-row">
+      <div class="stat-cell">
+        <div class="stat-big">4</div>
+        <div class="stat-desc">Friction points identified and addressed with specific design changes</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-big">2→1</div>
+        <div class="stat-desc">Problems solved by a single design decision — screen differentiation and cognitive load</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-big">✓ sig.</div>
+        <div class="stat-desc">Statistically significant drop-off reduction at recovery phrase step post-ship</div>
+      </div>
+    </div>
+  </section>
 
-  <script src="js/main.js"></script>
+  <hr class="rule">
+
+  <!-- REFLECTION -->
+  <section class="case-section">
+    <h2>Looking back</h2>
+    <p>
+      The most important structural decision in this project was
+      <span class="hl">instrumenting analytics before the study ran</span>,
+      not after. Partnering with data engineers to set up onboarding funnel
+      tracking early meant we had a quantitative baseline to measure against —
+      turning a qualitative usability study into a program with a measurable
+      before-and-after. Without that, the post-ship Chi-Square analysis wouldn't
+      have been possible.
+    </p>
+    <p>
+      The wireframing step was also deliberate. Handing design a findings
+      document and waiting for them to interpret it adds a translation layer
+      that often loses nuance. Producing two concrete wireframe directions —
+      with the trade-offs of each made explicit — <span class="hl">shortened
+      the path from insight to shipped design</span> and kept the research
+      rationale visible throughout the design process.
+    </p>
+    <p>
+      Given more resources, I'd have increased sample size to enable
+      statistical comparison of perceived security across the two design versions —
+      an important dimension for a wallet product where user trust is
+      as critical as usability.
+    </p>
+  </section>
+
+  <img src="images/case-study-2/timeline.png" alt="Project timeline" class="case-img">
+  <p class="case-img-caption">Project timeline — from stakeholder scoping to post-ship analytics validation.</p>
+
+</main>
+
+<footer>
+  <p>© 2025 April Yang</p>
+</footer>
+
 </body>
 </html>
