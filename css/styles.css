@@ -215,23 +215,53 @@ nav {
   position: relative;
   padding-top: 0.5rem;
 }
+
+/* Option B — terracotta offset block behind photo */
+.hero-photo-frame {
+  position: relative;
+  padding-bottom: 14px;
+  padding-right: 14px;
+}
+.hero-photo-frame::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 0;
+  bottom: 0;
+  background: var(--accent);
+  z-index: 0;
+}
+
 .hero-photo-wrap {
   position: relative;
   width: 100%;
   aspect-ratio: 3/4;
   overflow: hidden;
+  z-index: 1;
 }
 .hero-photo-wrap::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, transparent 60%, rgba(26,23,20,0.18));
+  background:
+    /* Option D: warm tint from bottom — ties cool sky tones to parchment palette */
+    linear-gradient(
+      to top,
+      rgba(181, 96, 58, 0.22) 0%,
+      rgba(181, 96, 58, 0.06) 40%,
+      transparent 70%
+    ),
+    /* existing diagonal vignette — keep this */
+    linear-gradient(160deg, transparent 60%, rgba(26,23,20,0.18));
+  z-index: 1;
+  pointer-events: none;
 }
 .hero-photo-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: sepia(8%) contrast(1.04);
+  filter: sepia(14%) contrast(1.04) brightness(0.99);
   transition: transform 6s ease;
 }
 .hero-photo-wrap:hover img { transform: scale(1.03); }
@@ -655,6 +685,14 @@ nav {
     padding: 3rem 1.5rem 2.5rem;
   }
   .hero-aside { max-width: 280px; }
+  .hero-photo-frame {
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+  .hero-photo-frame::before {
+    top: 10px;
+    left: 10px;
+  }
   .value-grid { grid-template-columns: 1fr; }
   .hero-stats { gap: 0; }
   .stat-item { padding-right: 1.25rem; }
